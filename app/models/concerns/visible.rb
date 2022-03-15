@@ -13,6 +13,10 @@ module Visible
     end
   end
 
+  def valid_statuses
+    VALID_STATUSES
+  end
+
   def archived?
     status == 'archived'
   end

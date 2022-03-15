@@ -8,6 +8,13 @@
     <%= form.text_area :body %>
   </p>
   <p>
+    <%= form.label :status %>
+    <%= form.select :status,
+      article.valid_statuses,
+      selected: article.valid_statuses.first
+    %>
+  </p>
+  <p>
     <%= form.submit %>
   </p>
 <% end %>

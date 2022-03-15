@@ -16,6 +16,14 @@
   </div>
 
   <div>
+    <%= form.label :status %>
+    <%= form.select :status,
+      article.valid_statuses,
+      selected: article.valid_statuses.first
+    %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
